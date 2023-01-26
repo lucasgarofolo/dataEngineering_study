@@ -128,6 +128,47 @@ Devemos considerar:
 - Automação com IaC e boas práticas CI/CD
 - Monitoramento
 
+## Capítulo 4
+
+### Por que o armazenamento de dados é importante?
+Porque permite que a empresa extraia valor dos dados.
+Onde os dados residem? Os dados residem em arquivos que são armazenados no disco físico ou outras mídias de armazenamento de dados.
+Parquet ou Avro? 
+JSON ou CSV? 
+HDF5 ou PICKLE?
+SQL/NoSQL ou Baseado em Arquivos? 
+SQL: é o formato tradicional de armazenamento de dados no formato tabular; é um dos formatos de armazenamento mais antigos e amplamente usado nos dias de hoje; ideal para dados estruturados (tabular); utiliza SGBDs (Sistemas Gerenciadores de Banco de Dados) como Oracle, PostgreSQL, SQL Server ou MySQL; 
+NoSQL: nasceu na era do Big Data para permitir o armazenamento de dados em diferentes formatos, em especial, dados semi-estruturados como no formato JSON, SML ou colunar; são sistemas de armazenamento orientador à performance e facilidade de uso; MongoDB, Cassandra, HBase, Redis.
+Baseado em arquivos: Parquet, Avro, JSON, CSV, ORC, HDF5, etc. 
+
+### Os padrões de acesso definem o tipo de armazenamento
+Quantos sistemas precisarão de acesso à camada de armazenamento de dados?
+Com que frequência os sistemas acessarão o armazenamento de dados?
+Qual o colume dedados que esses sistemas estarão lendo?
+Quanta lógica será aplicada por esses sistemas de dados?
+Como o sistema acessa tecnicamente os dados?
+
+### Armazenamento Colunar x Linha
+Baseado em linha: fácil e estruturado porém não foca na performance (como uma matriz)
+Baseado em coluna: parece uma tupla do python, cria-se um id para a busca focando na performance. no geral os dados nosql seguem essa lógica.
+
+### Quando usar um Data Warehouse?
+Um data warehouse é um tipo de banco de dados projetando especificamente para consultas e análises eficientes de grande quantidades de dados. Ele é normalmente usado para armazenar e gerenciar dados de várias fontes, como bancos de dados transacionais ou arquivos de log. Data warehouse é um conceito, logo pode ser criado como SGBD SQL ou NoSQL, no formato colunar ou baseado em linha.
+Um data warehouse é uma boa opção se você tiver grande volume de dados que precisa armazenar e analisar com eficiência ou se precisar oferecer suporte a sistemas de relatórios e inteligência de negócios.
+DW -> limpa e organiza, depois carrega.
+
+### Quando usar um Data Lake?
+Permite o armazenamento dos dados no seu formato bruto para posterior processamento e organização; 
+DL -> Carrega, depois limpa e organiza.
+DL é um repositório centralizado que permite armazenar e processar grandes quantidades de dados estruturados e não estruturados em escala.
+Ele foi projetado para lidar com uma ampla variedade de tipos de dados. Assim como o DW, o Data Lake é um conceito. Por definição não se usa um armazenamento SQL. Necessidade de uma repositório de dados centralizados.
+Em geral, um Data Lake é uma boa opção se você tiver grandes volumes de dados estruturados e não estruturados que precisa armazenar e processar em escala ou se precisar de um repositório centralizado para armazenar e processar dados de várias fonte.
+
+### Quando usar um Data Lakehouse
+
+
+
+
 
 
 
