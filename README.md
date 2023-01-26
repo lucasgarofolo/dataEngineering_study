@@ -186,6 +186,17 @@ Um sistema distribuido é uma rede de computadores que trabalham juntos como um 
 Como vamos gerenciar as tarefas computacionais em diversos computadores distribuídos?
 Sistema de Arquivos Local (NTFS, ext4, APFS): um sistema de arquivo local não foi desenvolvido para ambiente distribuido. Precisamos de uma camada de software para um sistema distribuído. Precisariamos de uma camada para um sistema de arquivos distribuido, capaz de gerenciar o armazenamento de forma distribuída pelo sistema, e um sistema de processamento distribuído, capaz de ler e gravar dados do sistema de armazenamento distribuído e realizar o processamento usando a capacidade computacional oferecida pelas máquinas.
 ##### Hierarquia de um sistema distribuído:
+Computadores: computador 1, computador 2 (Hardwares)
+SO:             SO              SO (Linux)
+Sis arq local:  1                1 (ext4)
+Sis aeq dist:   2                2 em rede (HDFS) (WDFS, NFS, SMB, Lustre,GlusterFS, Amazon S3, Google CS, Microsoft BS
+sis proc dist:  3                3 (Apache Spark, Storm, Flink, Flume, Kafka, Hadoop, Snowflake, Fivetran, Airbyte, AWS Glue, AWS Athena, Amazon EMR, Azure Synapse)
+
+#### Sistema de processamento distribuído
+Pode ser usado sempre que for necessário algum tipo de computação e que o processamento local não seja suficiente. Usamos Processamento distribuído quando é necessário alta capacidade computacional e/ou trabalhar com alto volume de dados. Precisamos de um software capaz de funcionar em ambiente distribuído.
+Não existe a melhor ferramenta, existe a ferramenta que solucione o seu problema.
+
+
 
 
 
