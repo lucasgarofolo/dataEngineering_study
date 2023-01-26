@@ -133,8 +133,11 @@ Devemos considerar:
 ### Por que o armazenamento de dados é importante?
 Porque permite que a empresa extraia valor dos dados.
 Onde os dados residem? Os dados residem em arquivos que são armazenados no disco físico ou outras mídias de armazenamento de dados.
-Parquet ou Avro? 
-JSON ou CSV? 
+Parquet: formato de armazenamento colunar para armazenar grandes qntds de dados de forma eficiente, Hadoop (em ambiente distribuido) permitindo consultas e análises eficientes usando ferramente como Apache Spark. Compartilhamento de dados entre sistemas.
+Avro: formato de serialização para armazenar dados; oferece suporte a estruturas de dados complexas; armazenamento de grandes quantidades de dados; dados com estruturas complexas; compartilhamento de dados entre sistemas; processamento com hadoop
+ORC: Optmized row columnar é um formato de armazenamento colunar para armazenar grandes quantidades de dados de forma eficiente; compostos de grupos de linha; suportam como datetime, decimal e listas mapas etc
+CSV:são simples fáceis e amplamente usados para armazenar dados; sem compressão, sem cabeçalhos, fáceis de usar desde que o volume de dados não seja muito grande. 
+JSON: JavaScript Object Notation formato de intercâmbio de dados leve que é fácil para os humanos leres e escreverem e fácil para as máquinas analisares e gerarem. 
 HDF5 ou PICKLE?
 SQL/NoSQL ou Baseado em Arquivos? 
 SQL: é o formato tradicional de armazenamento de dados no formato tabular; é um dos formatos de armazenamento mais antigos e amplamente usado nos dias de hoje; ideal para dados estruturados (tabular); utiliza SGBDs (Sistemas Gerenciadores de Banco de Dados) como Oracle, PostgreSQL, SQL Server ou MySQL; 
@@ -165,7 +168,24 @@ Ele foi projetado para lidar com uma ampla variedade de tipos de dados. Assim co
 Em geral, um Data Lake é uma boa opção se você tiver grandes volumes de dados estruturados e não estruturados que precisa armazenar e processar em escala ou se precisar de um repositório centralizado para armazenar e processar dados de várias fonte.
 
 ### Quando usar um Data Lakehouse
+Plataforma de dados moderna construída a partir de uma combinação de um Data Lake e um Data Warehouse. Une o armazenamento flexível de dados não estruturados de um Data Lake e os recursos e ferramentas de gerenciamento de Data Warehouse e os implementa estrategicamente como um sistema maior.
+From BI to AI (nem sempre)
+Vantagens: escalabilidade, flexibilidade, desempenho de consulta, repositório centralizado
+Desvantagens: complexidade, uso intensivo de recursos, desafios adicionais de governança de dados e integração de dados.
 
+### Quando usar um data store?
+Um data store é um repositório para armazenar dados. Dividido em 7 categorias: BD relacional, BD não relacional, Data Store (sistema de arquivos, armazenamento key-value, full-text search engine, fila de mensagens, in-memory data store).
+Sistemas de arquivos: local ou rede (ntfs, fat, nas, san); distribuídos: HDFS, object storage; na nuvem: amazon s3, azure blob storage, google storage, delta lake; 
+Armazenamento key-value: outra maneira de armazenar dados não relacionais é um armazenamento de chave-valor (dicionário em python). Redis e Memcached;
+Full-Text Search Engine: pesquisar documentos de texto. Elasticsearch
+Fila de mensagens: age como um middleware; ferramenta de transferência de dados, Apache Kafka.
+In-memory Data store: sistemas que armazenam, leem, gravam e acessam dados na memória de acesso aleatório (RAM) em vez de na memória somente leitura (ROM), Redis, VoltDB, SAP Hana.
+
+#### O que é um sistema distribuido?
+Um sistema distribuido é uma rede de computadores que trabalham juntos como um único sistema, e que pode ser usado para armazenamento, processamento ou ambos. Projetados para compartilhar recursos e cargas de trabalho de vários computadores, permitindo que dimensionem e lidem com cargas de trabalho maiores do que um único computador poderia fazer sozinho. 
+Como vamos gerenciar as tarefas computacionais em diversos computadores distribuídos?
+Sistema de Arquivos Local (NTFS, ext4, APFS): um sistema de arquivo local não foi desenvolvido para ambiente distribuido. Precisamos de uma camada de software para um sistema distribuído. Precisariamos de uma camada para um sistema de arquivos distribuido, capaz de gerenciar o armazenamento de forma distribuída pelo sistema, e um sistema de processamento distribuído, capaz de ler e gravar dados do sistema de armazenamento distribuído e realizar o processamento usando a capacidade computacional oferecida pelas máquinas.
+##### Hierarquia de um sistema distribuído:
 
 
 
