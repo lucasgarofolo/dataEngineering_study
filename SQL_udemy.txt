@@ -1,0 +1,32 @@
+DQL - Linguagem de Consulta de Dados
+- select
+
+DML - Linguagem de manipulação de dados
+- insert
+- update
+- delete
+
+DDL - Linguagem de Definição de Dados
+- create
+- alter
+- drop
+
+create sequence IDCliente;
+create table Clientes(
+  IDCliente int default nextval('IDCliente'::regclass) primary key,
+  Cliente Varchar(50),
+  Estado Varchar(2),
+  Sexo Char(1))
+  
+Clausula: select * from vendas where total > 6000
+Ordenação: select cliente from clientes order by cliente
+Ordem decrescente: select cliente from clientes order by DESC
+Ordem decrescente: select cliente, status from clientes order by desc, status
+Intervalo: select * from vendas where total between 6000 and 8000 (select * from vendas where total >= 6000 and total <= 8000)
+Limitar a procura: select * from vendas limit 10
+Distinguir os valores da coluna: select distinct status from clientes
+Contagem: select count(*) from vendas 
+Agrupar: select idvendedor, count(idvendedor) from vendas group by idvendedor
+Agrupando com having: select idvendedor, count(idvendedor) from vendas group by idvendedor having count(idvendedor) > 40
+
+select * from produtos where preco between 2000 and 7000
