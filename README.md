@@ -231,7 +231,13 @@ Combinação de um dData Lake e um DW, combina flexibilidade e escalabilidade.
 3 - Integração: usar qlq dado de qlq tipo
 4 - Armazenamento: armazenar os dados integrados em formato bruto, semi-estrutura e/estruturado.
 
+### Enterprise Data Hub
+tomadores de decisão (user) -> Enterprise datahub (governanca -> exploração de dados, ferramenta de pesquisa otimizada -> processamento -> indexação de dados -> armazenamento) -> Multipla camada de dados (Data Lake, Data Warehouse, ERP, outros)
+EDH -> é uma arquitetura de dados que combina uma variedade de tecnologias e ferramentas para permitir a coleta, armazenamento, gerenciamento e análise de dados em grande escala. É uma abordagem para a criação de um repositório centralizado de dados que pode ser usado para acessar, integrar e analisar dados de várias fontes. O objetivo é fornecer uma plataforma única para acessar todos os dados relevantes em uma empresa, independentemente de onde esses dados estejam armazenados ou como eles são formatados.
 
-
+### Arquitetura Data Mesh
+Data warehouse A, B, C <-> Data Infrastructure-as-a-Platform <-> Domínio 1, 2, 3 (ETL)
+Data Mesh é uma abordagem para construir uma arquitetura de dados descentralizadas, através de um design orientado à domínio. Data Mesh se preocupa principalmente com os dados em si.
+A proposta é dimensioar os dados por descentralização orientada por domínio. A responsabilidade pelos dados usados é transferida da equipe de dados central para equipes de domínio.
 
 
