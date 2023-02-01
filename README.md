@@ -199,6 +199,7 @@ Não existe a melhor ferramenta, existe a ferramenta que solucione o seu problem
 ## Capítulo 5
 
 ### Como implementar um Data Warehouse
+Vantagens: dados estruturados e limpos, performance de consultas e relatórios, governança robusta e capacidade. Desvantagens: pode ser caro e complexo, exige um processo de limpeza e modelagem de dados rigoroso, restringe a capacidade de armazenar grandes volumes.
 1 - Identificar requisitos do DW
 2 - Projeto e arquitetura incluindo a forma como os dados serão armazenados e gerenciados
 3 - Integração: integrar os dados de várias fontes diferentes em um único local, ETL
@@ -212,6 +213,7 @@ Não existe a melhor ferramenta, existe a ferramenta que solucione o seu problem
 10- Manutenção do Modeo de Dados:
 
 ### Como implementar um Data Lake
+Vantagens: capaz de armazenar grandes volumes de dados não estruturados e semi-estruturados, flexível, escalável, permite análise avançada em aplicações. Desvantagens: governança menos robusta, perfornama de consulta pode ser menor, pode ser caro, e ferramentas adicionais de limpeza emodelagem de dados.
 1 - Identificar os requistos: o que será incluído no Data Lake
 2 - Escolher uma plataforma: usar HDFS para local, ou Amazon S3, Azure Data Lake Storage ou Cloud Storage para nuvem
 3 - Integração: ao invés do ETL, usamos o ELT (Extração, Carga e Transformação)
@@ -222,5 +224,14 @@ Não existe a melhor ferramenta, existe a ferramenta que solucione o seu problem
 8 - Monitoramento: 
 
 ### Como implementar um Data Lakehouse
-1 - 
+Vantagens: capacidade de armazenar grandes volumes de dados não estruturados e semi-estruturados, além de boa governança e performance, flexibilidade, escalável e permite análise avançada e aplicações de BigData, ML e IA. Desvantagens: Caro e complexo para implementar e manter devido a necessidade de uma equipe multidisciplinar, depende de ferramentas adicionais para limpeza e modelagem de dados, ainda é um conceito recente no mercado e necessita de evolução e maturidade.
+Combinação de um dData Lake e um DW, combina flexibilidade e escalabilidade.
+1 - Identificar os requistos
+2 - Escolher uma plataforma: Azure Synapse Analytics, BigQuery, Dremio, Snowflake.
+3 - Integração: usar qlq dado de qlq tipo
+4 - Armazenamento: armazenar os dados integrados em formato bruto, semi-estrutura e/estruturado.
+
+
+
+
 
