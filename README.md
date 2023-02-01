@@ -196,10 +196,31 @@ sis proc dist:  3                3 (Apache Spark, Storm, Flink, Flume, Kafka, Ha
 Pode ser usado sempre que for necessário algum tipo de computação e que o processamento local não seja suficiente. Usamos Processamento distribuído quando é necessário alta capacidade computacional e/ou trabalhar com alto volume de dados. Precisamos de um software capaz de funcionar em ambiente distribuído.
 Não existe a melhor ferramenta, existe a ferramenta que solucione o seu problema.
 
+## Capítulo 5
 
+### Como implementar um Data Warehouse
+1 - Identificar requisitos do DW
+2 - Projeto e arquitetura incluindo a forma como os dados serão armazenados e gerenciados
+3 - Integração: integrar os dados de várias fontes diferentes em um único local, ETL
+4 - Construir o DW: 
+5 - Carga de dados: carregar os dados integrados, limpos e processados no DW.
 
+6 - Agendar atualizações
+7 - Acesso e segurança
+8 - Monitoramento
+9 - Usar Data Marts: DW departamentais, com volume de dados menor
+10- Manutenção do Modeo de Dados:
 
+### Como implementar um Data Lake
+1 - Identificar os requistos: o que será incluído no Data Lake
+2 - Escolher uma plataforma: usar HDFS para local, ou Amazon S3, Azure Data Lake Storage ou Cloud Storage para nuvem
+3 - Integração: ao invés do ETL, usamos o ELT (Extração, Carga e Transformação)
+4 - Armazenamento: armazenar os dados em formato bruto ou semi-estruturado.
+5 - Agendamentos e atualizações
+6 - Acesso: fornecer acesso aos dados do Data Lake através de ferramentas de análise, como Apache Hive ou Spark
+7 - Governança de Dados: garantir a qualidade e confiabilidade dos dadso armazenados no Data Lake.
+8 - Monitoramento: 
 
-
-
+### Como implementar um Data Lakehouse
+1 - 
 
