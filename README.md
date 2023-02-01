@@ -241,3 +241,8 @@ Data Mesh é uma abordagem para construir uma arquitetura de dados descentraliza
 A proposta é dimensioar os dados por descentralização orientada por domínio. A responsabilidade pelos dados usados é transferida da equipe de dados central para equipes de domínio.
 
 
+
+
+
+
+
